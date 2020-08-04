@@ -1,10 +1,10 @@
 {
-  "name": "@recallgraph/foxx-tracer-reporter-console",
+  "name": "@recallgraph/foxx-tracer-reporter-datadog",
   "version": "0.0.1",
-  "description": "A console reporter for the foxx-tracer-collector service that also serves as a template for building other, more complex reporters.",
+  "description": "A reporter for the foxx-tracer-collector service that pushes spans to Datadog.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RecallGraph/foxx-tracer-reporter-console.git"
+    "url": "git+https://github.com/RecallGraph/foxx-tracer-reporter-datadog.git"
   },
   "directories": {
     "lib": "dist"
@@ -23,12 +23,9 @@
   "author": "Aditya Mukhopadhyay",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RecallGraph/foxx-tracer-reporter-console/issues"
+    "url": "https://github.com/RecallGraph/foxx-tracer-reporter-datadog/issues"
   },
-  "homepage": "https://github.com/RecallGraph/foxx-tracer-reporter-console#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
+  "homepage": "https://github.com/RecallGraph/foxx-tracer-reporter-datadog#readme",
   "dependencies": {
     "foxx-tracer": "RecallGraph/foxx-tracer#development"
   },

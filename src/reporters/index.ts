@@ -1,3 +1,3 @@
-import ConsoleReporter from "./ConsoleReporter";
+import DatadogReporter from "./DatadogReporter";
 
-export { ConsoleReporter }
+export { DatadogReporter }
