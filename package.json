@@ -1,0 +1,41 @@
+{
+  "name": "@recallgraph/foxx-tracer-reporter-console",
+  "version": "0.0.1",
+  "description": "A console reporter for the foxx-tracer-collector service that also serves as a template for building other, more complex reporters.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RecallGraph/foxx-tracer-reporter-console.git"
+  },
+  "directories": {
+    "lib": "dist"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p ."
+  },
+  "keywords": [
+    "foxx",
+    "arangodb",
+    "opentracing",
+    "foxx-tracer-reporter",
+    "console"
+  ],
+  "author": "Aditya Mukhopadhyay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RecallGraph/foxx-tracer-reporter-console/issues"
+  },
+  "homepage": "https://github.com/RecallGraph/foxx-tracer-reporter-console#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "foxx-tracer": "RecallGraph/foxx-tracer#development"
+  },
+  "devDependencies": {
+    "@types/arangodb": "^3.5.6",
+    "@types/joi": "^14.3.4",
+    "@types/node": "^14.0.27",
+    "typescript": "^3.9.7"
+  }
+}
