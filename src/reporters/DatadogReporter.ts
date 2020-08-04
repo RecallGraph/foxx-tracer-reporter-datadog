@@ -1,4 +1,4 @@
-import { reporters, SpanData } from 'foxx-tracer';
+import { reporters, SpanData } from '@recallgraph/foxx-tracer';
 import { REFERENCE_CHILD_OF } from 'opentracing'
 import { COMPONENT, ERROR, SPAN_KIND } from "opentracing/lib/ext/tags";
 

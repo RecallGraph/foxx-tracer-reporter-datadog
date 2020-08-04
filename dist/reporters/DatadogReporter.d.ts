@@ -1,10 +1,10 @@
-import { reporters, SpanData } from 'foxx-tracer';
+import { reporters, SpanData } from '@recallgraph/foxx-tracer';
 
 export default class DatadogReporter implements reporters.Reporter {
-  private readonly ddURL;
+    private readonly ddURL;
 
-  constructor(ddURL: string);
+    constructor(ddURL: string);
 
-  report(traces: SpanData[][]): void;
+    report(traces: SpanData[][]): void;
 }
 //# sourceMappingURL=DatadogReporter.d.ts.map

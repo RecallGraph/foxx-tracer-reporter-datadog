@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/RecallGraph/foxx-tracer-reporter-datadog#readme",
   "dependencies": {
-    "foxx-tracer": "RecallGraph/foxx-tracer#development"
+    "@recallgraph/foxx-tracer": "^0.1.0"
   },
   "devDependencies": {
     "@types/arangodb": "^3.5.6",
