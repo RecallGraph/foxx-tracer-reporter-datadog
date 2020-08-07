@@ -1,9 +1,7 @@
 import { reporters, SpanData } from '@recallgraph/foxx-tracer';
 
-export default class DatadogReporter implements reporters.Reporter {
-    private readonly ddURL;
-
-    constructor(ddURL: string);
+export default class DatadogReporter extends reporters.Reporter {
+    constructor(namespace?: string);
 
     report(traces: SpanData[][]): void;
 }

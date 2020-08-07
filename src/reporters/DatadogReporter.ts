@@ -19,11 +19,9 @@ type Record = {
   metrics?: { [key: string]: number };
 }
 
-export default class DatadogReporter implements reporters.Reporter {
-  private readonly ddURL: string;
-
-  constructor(ddURL: string) {
-    this.ddURL = ddURL;
+export default class DatadogReporter extends reporters.Reporter {
+  constructor(namespace: string = 'datadog') {
+    super(namespace);
   }
 
   report(traces: SpanData[][]): void {
@@ -71,7 +69,7 @@ export default class DatadogReporter implements reporters.Reporter {
       return record;
     }));
 
-    request.put(this.ddURL, {
+    request.put(this.config['dd-agent-url'], {
       json: true,
       body: ddTraces,
       headers: {
