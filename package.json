@@ -1,6 +1,6 @@
 {
   "name": "@recallgraph/foxx-tracer-reporter-datadog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A reporter for the foxx-tracer-collector service that pushes spans to Datadog.",
   "repository": {
     "type": "git",
