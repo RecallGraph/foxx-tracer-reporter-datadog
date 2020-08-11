@@ -1,3 +1,6 @@
 {
-  "dd-agent-url": "http://localhost:8126/v0.4/traces"
+  "description": "Settings for the datadog reporter.",
+  "default": {
+    "dd-agent-url": "http://localhost:8126/v0.4/traces"
+  }
 }
