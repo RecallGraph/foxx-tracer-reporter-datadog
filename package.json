@@ -1,6 +1,6 @@
 {
   "name": "@recallgraph/foxx-tracer-reporter-datadog",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "A reporter for the foxx-tracer-collector service that pushes spans to Datadog.",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/RecallGraph/foxx-tracer-reporter-datadog#readme",
   "dependencies": {
-    "@recallgraph/foxx-tracer": "^2.0.1",
+    "@recallgraph/foxx-tracer": "^2.0.11",
     "opentracing": "^0.14.4"
   },
   "devDependencies": {

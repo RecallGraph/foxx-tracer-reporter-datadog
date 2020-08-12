@@ -19,7 +19,7 @@ type Record = {
   metrics?: { [key: string]: number };
 }
 
-export default class DatadogReporter extends reporters.Reporter {
+export = class DatadogReporter extends reporters.Reporter {
   constructor(namespace: string = 'datadog') {
     super(namespace);
   }

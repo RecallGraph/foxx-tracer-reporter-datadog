@@ -1,11 +1,9 @@
 'use strict'
-Object.defineProperty(exports, '__esModule', { value: true })
 const foxx_tracer_1 = require('@recallgraph/foxx-tracer')
 const opentracing_1 = require('opentracing')
 const tags_1 = require('opentracing/lib/ext/tags')
 const request = require('@arangodb/request')
-
-class DatadogReporter extends foxx_tracer_1.reporters.Reporter {
+module.exports = class DatadogReporter extends foxx_tracer_1.reporters.Reporter {
   constructor (namespace = 'datadog') {
     super(namespace)
   }
@@ -57,6 +55,4 @@ class DatadogReporter extends foxx_tracer_1.reporters.Reporter {
     })
   }
 }
-
-exports.default = DatadogReporter
 //# sourceMappingURL=DatadogReporter.js.map
