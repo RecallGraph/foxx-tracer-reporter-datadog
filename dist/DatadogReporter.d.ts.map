@@ -6,5 +6,5 @@
     "../src/DatadogReporter.ts"
   ],
   "names": [],
-  "mappings": "AAAA,OAAO,EAAa,QAAQ,EAAE,MAAM,0BAA0B,CAAC;;qBAsBtC,MAAM;uBAId,QAAQ,EAAE,EAAE,GAAG,IAAI;;;;;AALpC,kBA0DC"
+  "mappings": "AAAA,OAAO,EAAa,QAAQ,EAAE,MAAM,0BAA0B,CAAC;;qBAoBtC,MAAM;uBAId,QAAQ,EAAE,EAAE,GAAG,IAAI;;;;;AALpC,kBA0DC"
 }

@@ -1,7 +1,6 @@
 'use strict'
 const foxx_tracer_1 = require('@recallgraph/foxx-tracer')
 const opentracing_1 = require('opentracing')
-const tags_1 = require('opentracing/lib/ext/tags')
 const request = require('@arangodb/request')
 module.exports = class DatadogReporter extends foxx_tracer_1.reporters.Reporter {
   constructor (namespace = 'datadog') {
@@ -13,18 +12,18 @@ module.exports = class DatadogReporter extends foxx_tracer_1.reporters.Reporter 
       const record = {
         duration: Math.floor((span.finishTimeMs - span.startTimeMs) * 1e6),
         name: span.operation,
-        resource: span.tags[tags_1.COMPONENT],
+        resource: span.tags[opentracing_1.Tags.COMPONENT],
         service: span.tags.service || 'UNKNOWN',
         span_id: parseInt(span.context.span_id, 16),
         start: Math.floor(span.startTimeMs * 1e6),
         trace_id: parseInt(span.context.trace_id, 16),
-        type: span.tags[tags_1.SPAN_KIND] || 'db'
+        type: span.tags[opentracing_1.Tags.SPAN_KIND] || 'db'
       }
       const parent = span.references.find(ref => ref.type === opentracing_1.REFERENCE_CHILD_OF)
       if (parent) {
         record.parent_id = parseInt(parent.context.span_id, 16)
       }
-      const hasError = span.tags[tags_1.ERROR]
+      const hasError = span.tags[opentracing_1.Tags.ERROR]
       if (hasError) {
         record.error = 1
       }

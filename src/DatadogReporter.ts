@@ -1,8 +1,6 @@
 import { reporters, SpanData } from '@recallgraph/foxx-tracer';
-import { REFERENCE_CHILD_OF } from 'opentracing'
-import { COMPONENT, ERROR, SPAN_KIND } from "opentracing/lib/ext/tags";
-
-const request = require('@arangodb/request');
+import { REFERENCE_CHILD_OF, Tags } from 'opentracing';
+import request = require('@arangodb/request');
 
 type Record = {
   trace_id: number;
@@ -29,12 +27,12 @@ export = class DatadogReporter extends reporters.Reporter {
       const record: Record = {
         duration: Math.floor((span.finishTimeMs - span.startTimeMs) * 1e6),
         name: span.operation,
-        resource: <string>span.tags[COMPONENT],
+        resource: <string>span.tags[Tags.COMPONENT],
         service: <string>span.tags.service || 'UNKNOWN',
         span_id: parseInt(span.context.span_id, 16),
         start: Math.floor(span.startTimeMs * 1e6),
         trace_id: parseInt(span.context.trace_id, 16),
-        type: <string>span.tags[SPAN_KIND] || 'db'
+        type: <string>span.tags[Tags.SPAN_KIND] || 'db'
       };
 
       const parent = span.references.find(ref => ref.type === REFERENCE_CHILD_OF);
@@ -42,7 +40,7 @@ export = class DatadogReporter extends reporters.Reporter {
         record.parent_id = parseInt(parent.context.span_id, 16);
       }
 
-      const hasError = span.tags[ERROR];
+      const hasError = span.tags[Tags.ERROR];
       if (hasError) {
         record.error = 1;
       }

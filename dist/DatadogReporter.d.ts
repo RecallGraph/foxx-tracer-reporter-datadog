@@ -1,11 +1,11 @@
 import { SpanData } from '@recallgraph/foxx-tracer';
 
 declare const _default: {
-  new(namespace?: string): {
-    report(traces: SpanData[][]): void;
-    readonly _config: any;
-    readonly config: any;
-  };
+    new(namespace?: string): {
+        report(traces: SpanData[][]): void;
+        readonly _config: any;
+        readonly config: any;
+    };
 };
 export = _default;
 //# sourceMappingURL=DatadogReporter.d.ts.map
