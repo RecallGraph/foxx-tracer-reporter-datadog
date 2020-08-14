@@ -1,4 +1,4 @@
-import { reporters, SpanData } from '@recallgraph/foxx-tracer';
+import { reporters, types } from '@recallgraph/foxx-tracer';
 import { REFERENCE_CHILD_OF, Tags } from 'opentracing';
 import request = require('@arangodb/request');
 
@@ -22,7 +22,7 @@ export = class DatadogReporter extends reporters.Reporter {
     super(namespace);
   }
 
-  report(traces: SpanData[][]): void {
+  report(traces: types.SpanData[][]): void {
     const ddTraces = traces.map(trace => trace.map(span => {
       const record: Record = {
         duration: Math.floor((span.finishTimeMs - span.startTimeMs) * 1e6),

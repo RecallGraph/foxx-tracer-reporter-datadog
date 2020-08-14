@@ -1,8 +1,8 @@
-import { SpanData } from '@recallgraph/foxx-tracer';
+import { types } from '@recallgraph/foxx-tracer';
 
 declare const _default: {
     new(namespace?: string): {
-        report(traces: SpanData[][]): void;
+        report(traces: types.SpanData[][]): void;
         readonly _config: any;
         readonly config: {
             [key: string]: any;
