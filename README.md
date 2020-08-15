@@ -2,7 +2,7 @@
 A reporter for the [foxx-tracer-collector](https://github.com/RecallGraph/foxx-tracer-collector) service, that pushes spans to Datadog.
 
 ## Installation
-See the collector docs for detailed instruction docs. To quickly get up and running, run the following inside the collector's source root:
+See the [collector docs](https://github.com/RecallGraph/foxx-tracer-collector/wiki/Reporters#adding-a-reporter) for detailed instruction docs. To quickly get up and running, run the following inside the collector's source root:
 ```bash
 npx grunt reporter:add --pkg=@recallgraph/foxx-tracer-reporter-datadog --namespace=datadog 
 ```
